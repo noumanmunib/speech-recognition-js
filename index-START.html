@@ -28,7 +28,13 @@
           .join("");
         // console.log(transcript);
 
-        p.textContent = transcript; // Displaying the speech results
+        const carScript = transcript.replace(
+          /(ferrari|lamborghini|Mercedes|Audi|car|sports car)/gi,
+          "🚗"
+        );
+        // console.log(carScript);
+        p.textContent = carScript;
+        // p.textContent = transcript; // Displaying the speech results
 
         // If the first line is complete, continue the second line from another paragraph:
         if (e.results[0].isFinal) {
